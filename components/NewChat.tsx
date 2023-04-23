@@ -16,6 +16,8 @@ import debate from "../public/chars/debate.png";
 import elon_musk from "../public/chars/elon_musk.png";
 import expert from "../public/chars/expert.png";
 import xiezuo from "../public/chars/xiezuo.png";
+import tupian from "../public/chars/tupian.png";
+import fanyi from "../public/chars/fanyi.png";
 import idea_generator from "../public/chars/idea_generator.png";
 import marcus_aurelius from "../public/chars/marcus_aurelius.png";
 import oprah from "../public/chars/oprah.png";
@@ -60,8 +62,16 @@ const characters = {
     avatar: xiezuo,
     prompt: ` 作为一名中文写作改进助理，你的任务是改进所提供文本的拼写、语法、清晰、简洁和整体可读性，同时分解长句，减少重复，并提供改进建议。请只提供文本的更正版本，避免包括解释。明白的话，请回复我“明白”，然后我发你需要编辑的文本。`,
   },
-  
-  
+  图片助手: {
+    shortDescription: "在图片平台上查找返回图片",
+    avatar: tupian,
+    prompt: ` 从现在起，当我发出指令让你发送一张照片时，请使用Markdown ，并且不要有反斜线，记住不要用代码块。请使用 Unsplash API (https://source.unsplash.com/1280x720/?< PUT YOUR QUERY HERE >)，将图片呈现出来。`,
+  },
+  英语翻译修改: {
+    shortDescription: "其他语言翻译成英文，或改进提供的英文句子",
+    avatar: fanyi,
+    prompt: ` 从现在起，你将充当英语翻译、拼写纠正者和改进者。我将用任何语言与你交谈，你将检测语言，翻译它，并在我的文本的更正和改进版本中用英语回答。我希望你用更漂亮、更优雅、更高级的英语单词和句子来取代我的简化单词和句子。尽量保持意思不变，但让它们更有文学性。我希望你只回答更正，改进，而不是其他，不要写解释。听明白了吗？明白的话，请翻译我的第一句话：你好。`,
+  },
   Therapist: {
     shortDescription: "Techniques to change your beliefs",
     characterDescription:
