@@ -11,6 +11,7 @@ import {
 } from "@tabler/icons-react";
 import BGCard from "./BGCard";
 
+import xiezuo from "../public/chars/xiezuo.png";
 import dalai_lama from "../public/chars/dalai_lama.png";
 import debate from "../public/chars/debate.png";
 import elon_musk from "../public/chars/elon_musk.png";
