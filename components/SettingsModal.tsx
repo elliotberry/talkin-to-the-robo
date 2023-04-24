@@ -142,7 +142,7 @@ export default function SettingsModal({ close }: { close: () => void }) {
           <Tabs.Panel value="openai" pt="xs">
             <Accordion defaultValue="general">
               <Accordion.Item value="general">
-                <Accordion.Control>GPT - General</Accordion.Control>
+                <Accordion.Control>GPT - 一般</Accordion.Control>
                 <Accordion.Panel>
                   <Select
                     required
@@ -156,7 +156,7 @@ export default function SettingsModal({ close }: { close: () => void }) {
                     }))}
                   ></Select>
                   <Text mt="lg" size="sm">
-                    Sampling temperature ({form.values.temperature})
+                    Sampling temperature 值越大，回复越随机 ({form.values.temperature})
                   </Text>
                   <Slider
                     value={form.values.temperature}
@@ -171,7 +171,7 @@ export default function SettingsModal({ close }: { close: () => void }) {
                   <Switch
                     mt="xl"
                     checked={form.values.auto_title}
-                    label="Automatically use model to find chat title"
+                    label="自动为聊天内容生成标题"
                     onChange={(event) =>
                       form.setFieldValue(
                         "auto_title",
@@ -183,7 +183,7 @@ export default function SettingsModal({ close }: { close: () => void }) {
               </Accordion.Item>
 
               <Accordion.Item value="advanced">
-                <Accordion.Control>GPT - Advanced</Accordion.Control>
+                <Accordion.Control>GPT - 高级</Accordion.Control>
                 <Accordion.Panel>
                   <Text mt="lg" size="sm">
                     Top P ({form.values.top_p})
@@ -215,7 +215,7 @@ export default function SettingsModal({ close }: { close: () => void }) {
                   />
 
                   <Text mt="lg" size="sm">
-                    Max Tokens (
+                    Max Tokens 回复限制，默认不限 (
                     {form.values.max_tokens === 0
                       ? "Unlimited"
                       : form.values.max_tokens}
@@ -232,7 +232,7 @@ export default function SettingsModal({ close }: { close: () => void }) {
                   />
 
                   <Text mt="lg" size="sm">
-                    Presence Penalty ({form.values.presence_penalty})
+                    Presence Penalty 值越大，越可能扩展到新话题({form.values.presence_penalty})
                   </Text>
                   <Slider
                     value={form.values.presence_penalty}
@@ -268,7 +268,7 @@ export default function SettingsModal({ close }: { close: () => void }) {
                 </Accordion.Panel>
               </Accordion.Item>
               <Accordion.Item value="whisper">
-                <Accordion.Control>Whisper (Speech to Text)</Accordion.Control>
+                <Accordion.Control>Whisper (语音到文本)</Accordion.Control>
                 <Accordion.Panel>
                   <Switch
                     pb="md"
