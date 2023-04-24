@@ -80,7 +80,7 @@ export default function Hero() {
         <div className={classes.inner}>
           <div className={classes.content}>
             <Title className={classes.title}>
-              <span className={classes.highlight}>YakGPT</span>
+              <span className={classes.highlight}>GraceGPT</span>
             </Title>
             <Text color="dimmed" mt="md">
               A simple, locally running ChatGPT UI.
@@ -97,18 +97,17 @@ export default function Hero() {
               }
             >
               <List.Item>
-                <b>Run locally on browser</b> – no need to install any
+                <b>本地浏览器运行</b> – 无需安装其他应用
                 applications
               </List.Item>
               <List.Item>
-                <b>Faster than the official UI</b> – connect directly to the API
+                <b>比官方UI更快</b> – 直接连接到 API
               </List.Item>
               <List.Item>
-                <b>Easy mic integration</b> – no more typing!
+                <b>简单的麦克风集成</b> – 如需打字，解放双手
               </List.Item>
               <List.Item>
-                <b>Use your own API key</b> – ensure your data privacy and
-                security
+                <b>使用你自己的 API key</b> – 没有API KEY可在下方按钮自助获取
               </List.Item>
             </List>
 
@@ -119,18 +118,18 @@ export default function Hero() {
                 className={classes.control}
                 onClick={open}
               >
-                Enter API Key
+                填入 API Key
               </Button>
               <Button
                 component="a"
-                href="https://github.com/yakGPT/yakGPT"
+                href="https://faka.aihub.ren/buy/42"
                 variant="default"
                 radius="xl"
                 size="md"
                 className={classes.control}
-                leftIcon={<IconBrandGithub size={20} />}
+                
               >
-                Source Code
+                Digital Shop
               </Button>
             </Group>
           </div>
