@@ -32,10 +32,10 @@ const useStyles = createStyles((theme) => ({
     width: rem(28),
     borderRadius: rem(28),
     backgroundColor:
-      theme.colorScheme === "黑夜"
+      theme.colorScheme === "dark"
         ? theme.colors.gray[4]
         : theme.colors.dark[4],
-    color: theme.colorScheme === "黑夜" ? theme.black : theme.colors.blue[2],
+    color: theme.colorScheme === "dark" ? theme.black : theme.colors.blue[2],
   },
 
   value: {
@@ -46,7 +46,7 @@ const useStyles = createStyles((theme) => ({
 export function ThemeToggle() {
   const { classes } = useStyles();
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
-  const Icon = colorScheme === "黑夜" ? IconSun : IconMoon;
+  const Icon = colorScheme === "dark" ? IconSun : IconMoon;
 
   return (
     <Group position="center" my="xl">
@@ -57,7 +57,7 @@ export function ThemeToggle() {
         title="Ctrl + J"
       >
         <Text size="sm" className={classes.value}>
-          {upperFirst(colorScheme === "light" ? "黑夜" : "light")} theme
+          {upperFirst(colorScheme === "light" ? "黑夜" : "白昼")} theme
         </Text>
 
         <Center className={classes.iconWrapper}>
