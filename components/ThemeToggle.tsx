@@ -14,7 +14,7 @@ import { IconMoon, IconSun } from "@tabler/icons-react";
 const useStyles = createStyles((theme) => ({
   control: {
     backgroundColor:
-      theme.colorScheme === "黑夜"
+      theme.colorScheme === "dark"
         ? theme.colors.dark[8]
         : theme.colors.gray[0],
     display: "flex",
