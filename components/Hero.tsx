@@ -129,7 +129,7 @@ export default function Hero() {
                 className={classes.control}
                 
               >
-                Digital Shop
+                🛒 Digital Shop
               </Button>
             </Group>
           </div>
