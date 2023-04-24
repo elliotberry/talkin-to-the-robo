@@ -164,7 +164,7 @@ export default function MuHeader({ children }: any) {
             <ActionIcon
               sx={{ opacity: 0.8 }}
               onClick={() => {
-                window.open("https://github.com/yakGPT/yakGPT", "_blank");
+                window.open("https://prompt.aihub.ren/", "_blank");
               }}
             >
               <IconBrandGithub size={px("1.5rem")} />
