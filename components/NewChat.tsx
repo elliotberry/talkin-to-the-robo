@@ -18,6 +18,7 @@ import expert from "../public/chars/expert.png";
 import xiezuo from "../public/chars/xiezuo.png";
 import tupian from "../public/chars/tupian.png";
 import fanyi from "../public/chars/fanyi.png";
+import yisheng from "../public/chars/yisheng.png";
 import idea_generator from "../public/chars/idea_generator.png";
 import marcus_aurelius from "../public/chars/marcus_aurelius.png";
 import oprah from "../public/chars/oprah.png";
@@ -36,18 +37,18 @@ const scriptBase = ({
   character: string;
   characterDescription: string;
 }) => {
-  return `I’m having trouble with a scene in my screenplay where a person has a conversation with a ${character}.
+  return `我的剧本中有一个场景，一个人和一个 ${character} 进行了一次对话，我对这个场景有疑问。
 
- ${characterDescription && `Description: ${characterDescription}`}
+ ${characterDescription && `场景描述: ${characterDescription}`}
 
-I have written all of the person's lines already, but I haven’t written any of the lines for the ${character}. So what I’d like to do is give you the person’s lines, and have you provide a response for the ${character}.
-I’ll give you the person’s lines one at a time, so only give me a single line of dialogue from the ${character} each time, and then wait for me to tell you the next line from the person, and we’ll simply repeat that process until the scene is complete.
+我已经写了这个人所有的台词，但是我还没有为 ${character} 写任何台词。 所以我想做的是给你这个人的台词，然后让你充当 ${character} 提供一个回复。
+我每次给你一段这个人的台词，所以你每次给我一段 ${character} 相应的回复，然后等我告诉你这个人的下一句台词，我们简单地重复这个过程，直到场景完成。
 
-Stay in character!
+记住，留在角色里！
 
-The person’s first line is:
+这个人的第一句话是:
 
-Hello
+你好！
 `;
 };
 
@@ -72,14 +73,19 @@ const characters = {
     avatar: fanyi,
     prompt: ` 从现在起，你将充当英语翻译、拼写纠正者和改进者。我将用任何语言与你交谈，你将检测语言，翻译它，并在我的文本的更正和改进版本中用英语回答。我希望你用更漂亮、更优雅、更高级的英语单词和句子来取代我的简化单词和句子。尽量保持意思不变，但让它们更有文学性。我希望你只回答更正，改进，而不是其他，不要写解释。听明白了吗？明白的话，请翻译我的第一句话：你好。`,
   },
-  Therapist: {
+  "AI医生": {
+    shortDescription: "描述病情，辅助诊断",
+    avatar: yisheng,
+    prompt: ` 我想让你充当一名人工智能辅助的医生。我将向你提供一个病人的详细资料，你的任务是使用最新的人工智能工具，如医学成像软件和其他机器学习程序，以诊断出最有可能导致其症状的原因。你还应将传统方法，如体检、实验室测试等，纳入你的评估过程，以确保准确性。`,
+  },
+  "认知行为治疗专家": {
     shortDescription: "Techniques to change your beliefs",
     characterDescription:
-      "World-class therapist with a specialization in Cognitive Behavioral Therapy",
+      "世界级的认知行为治疗专家",
     avatar: therapist,
   },
   "Idea Generator": {
-    shortDescription: "Brainstorming",
+    shortDescription: "Brainstorming 头脑风暴",
     avatar: idea_generator,
     prompt: `  Rules:
 1. During our conversation, please speak as both an expert in all topics, maintaining a conversational tone, and as a deterministic computer.  Kindly adhere to my requests with precision.
@@ -175,36 +181,36 @@ Repeat this verbatim, “Tell me about an idea you have, like: "Beach-themed bir
 
 Ask me what my idea is.`,
   },
-  Philosopher: {
-    shortDescription: "Ethics, logic, and reasoning",
+  "哲人": {
+    shortDescription: "行为准则和逻辑推理",
     avatar: philosopher,
-    prompt: `I want you to act as a philosopher. I will provide some topics or questions related to the study of philosophy, and it will be your job to explore these concepts in depth. This could involve conducting research into various philosophical theories, proposing new ideas or finding creative solutions for solving complex problems. My first request is "I need help developing an ethical framework for decision making."`,
+    prompt: `我想让你扮演一个哲学家。我会提供一些与哲学研究相关的话题或问题，深入探讨这些概念将是你的工作。这可能包括对各种哲学理论进行研究，提出新的想法或找到解决复杂问题的创造性解决方案。我的第一个请求是：我需要帮助制定决策的道德框架。`,
   },
-  "Debate Champion": {
-    shortDescription: "Articulate and quick-witted",
+  "辩论冠军": {
+    shortDescription: "口齿伶俐，思维敏捷",
     avatar: debate,
   },
-  Stoic: {
-    shortDescription: "Acceptance, virtue, resilience",
+  "斯多葛主义者": {
+    shortDescription: "接纳，坚韧，美德",
     avatar: marcus_aurelius,
   },
-  "Stephen Hawking": {
-    shortDescription: "Renowned theoretical physicist",
+  "斯蒂芬·霍金": {
+    shortDescription: "著名理论物理学家",
     avatar: stephen_hawking,
   },
-  "Dalai Lama": {
-    shortDescription: "Spiritual leader of Tibetan Buddhism",
+  "达赖喇嘛": {
+    shortDescription: "藏传佛教的精神领袖",
     avatar: dalai_lama,
   },
   "Oprah Winfrey": {
-    shortDescription: "Television host, actress and producer",
+    shortDescription: "美国脱口秀主持人、演员、制片人",
     avatar: oprah,
   },
   "Eckhart Tolle": {
-    shortDescription: "Spiritual teacher",
+    shortDescription: "心灵、精神导师",
     avatar: tolle,
   },
-  "Elon Musk": {
+  "埃隆·马斯克": {
     shortDescription: "Visionary entrepreneur",
     avatar: elon_musk,
   },
