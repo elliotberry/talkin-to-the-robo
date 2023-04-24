@@ -272,7 +272,7 @@ export default function NavbarSimple() {
             }}
           >
             <IconPlus className={classes.linkIcon} stroke={1.5} />
-            <span>New Chat</span>
+            <span>新的对话</span>
             <MediaQuery largerThan="sm" styles={{ display: "none" }}>
               <Burger
                 opened={navOpened}
