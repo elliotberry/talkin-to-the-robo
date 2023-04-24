@@ -66,7 +66,7 @@ export function APIPanel({
 
       if (keyValid) {
         notifications.show({
-          message: "Key saved!",
+          message: "Key 已保存!",
           color: "green",
         });
         setKeyFun(apiKey);
@@ -99,7 +99,7 @@ export function APIPanel({
         <p>{descriptionAboveInput}</p>
         <PasswordInput
           label="API Key"
-          placeholder="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+          placeholder="sk-xxxxxxxxxxxxxxxxxxxxxxxxxxx"
           icon={icon}
           value={apiKey}
           onChange={handleKeyChange}
@@ -118,10 +118,10 @@ export function APIPanel({
             type="submit"
             disabled={initialKey === apiKey && initialRegion === region}
           >
-            Save
+            保存
           </Button>
           <Button onClick={closeModal} variant="light">
-            Cancel
+            取消
           </Button>
         </Group>
       </form>
@@ -162,13 +162,13 @@ export default function KeyModal({ close }: { close: () => void }) {
 
           <Tabs.Panel value="openai" pt="xs">
             <APIPanel
-              name="Enter Your OpenAI API Key"
+              name="填入你的 OpenAI API Key"
               initialKey={apiKeyOpenAI}
               setKeyFun={setApiKeyOpenAI}
-              descriptionAboveInput="You need an OpenAI API Key. Your API Key is stored locally on your browser and never sent anywhere else."
+              descriptionAboveInput="您需要一个OpenAI API密钥。您的API密钥存储在本地的浏览器上，永远不会被发送到其他地方。如果您没有API KEY，可在首页按钮自助获取。"
               descriptionBelowInput={
                 <p>
-                  → Get your API key from the{" "}
+                  → 如果您有账号请登官网获取API：{" "}
                   <a
                     target="_blank"
                     href="https://platform.openai.com/account/api-keys"
@@ -184,15 +184,15 @@ export default function KeyModal({ close }: { close: () => void }) {
           </Tabs.Panel>
           <Tabs.Panel value="azure" pt="xs">
             <APIPanel
-              name="Enter Your Azure Speech API Key"
+              name="输入您的 Azure Speech API Key"
               initialKey={apiKeyAzure}
               initialRegion={apiKeyAzureRegion}
               setKeyFun={setApiKeyAzure}
               setKeyFunRegion={setApiKeyAzureRegion}
-              descriptionAboveInput="If you'd like to use TTS via Azure, you will need an Azure Speech API Key. Your API Key is stored locally on your browser and never sent anywhere else. Note that cost estimation does not work for Azure, so watch your usage!"
+              descriptionAboveInput="如果您想使用 TTS via Azure, 您需要一个 Azure Speech API Key。 您的API密钥存储在本地的浏览器上，永远不会被发送到其他地方。 请注意，成本估算对Azure无效，所以请注意您的使用情况！"
               descriptionBelowInput={
                 <p>
-                  → Azure gives a $200 free credit on signup.{" "}
+                  → Azure 对注册用户提供200美元的免费积分：{" "}
                   <a
                     target="_blank"
                     href="https://carldesouza.com/get-a-microsoft-cognitive-services-subscription-key/"
@@ -207,13 +207,13 @@ export default function KeyModal({ close }: { close: () => void }) {
           </Tabs.Panel>
           <Tabs.Panel value="11labs" pt="xs">
             <APIPanel
-              name="Enter Your Eleven Labs API Key"
+              name="输入您的 Eleven Labs API Key"
               initialKey={apiKey11Labs}
               setKeyFun={setApiKey11Labs}
-              descriptionAboveInput="If you'd like to use TTS via Eleven Labs, you will need an Eleven Labs API Key. Your API Key is stored locally on your browser and never sent anywhere else. Note that cost estimation does not work for ElevenLabs, so watch your usage!"
+              descriptionAboveInput="如果您想使用 TTS via Eleven Labs, 您需要一个 Eleven Labs API Key。 您的API密钥存储在本地的浏览器上，永远不会被发送到其他地方。 请注意，成本估算不适用于 ElevenLabs，所以请注意您的使用情况！"
               descriptionBelowInput={
                 <p>
-                  → Get your API key from your{" "}
+                  → 从您的ElevenLabs中获取API密钥：{" "}
                   <a
                     target="_blank"
                     href="https://beta.elevenlabs.io/speech-synthesis"
