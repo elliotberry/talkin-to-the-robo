@@ -14,7 +14,7 @@ import { IconMoon, IconSun } from "@tabler/icons-react";
 const useStyles = createStyles((theme) => ({
   control: {
     backgroundColor:
-      theme.colorScheme === "dark"
+      theme.colorScheme === "黑夜"
         ? theme.colors.dark[8]
         : theme.colors.gray[0],
     display: "flex",
@@ -32,10 +32,10 @@ const useStyles = createStyles((theme) => ({
     width: rem(28),
     borderRadius: rem(28),
     backgroundColor:
-      theme.colorScheme === "dark"
+      theme.colorScheme === "黑夜"
         ? theme.colors.gray[4]
         : theme.colors.dark[4],
-    color: theme.colorScheme === "dark" ? theme.black : theme.colors.blue[2],
+    color: theme.colorScheme === "黑夜" ? theme.black : theme.colors.blue[2],
   },
 
   value: {
@@ -46,7 +46,7 @@ const useStyles = createStyles((theme) => ({
 export function ThemeToggle() {
   const { classes } = useStyles();
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
-  const Icon = colorScheme === "dark" ? IconSun : IconMoon;
+  const Icon = colorScheme === "黑夜" ? IconSun : IconMoon;
 
   return (
     <Group position="center" my="xl">
@@ -57,7 +57,7 @@ export function ThemeToggle() {
         title="Ctrl + J"
       >
         <Text size="sm" className={classes.value}>
-          {upperFirst(colorScheme === "light" ? "dark" : "light")} theme
+          {upperFirst(colorScheme === "light" ? "黑夜" : "light")} theme
         </Text>
 
         <Center className={classes.iconWrapper}>
