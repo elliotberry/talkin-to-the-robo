@@ -12,7 +12,7 @@ import {
   px,
 } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
-import { IconBrandGithub, IconPlus } from "@tabler/icons-react";
+import { IconBrandGithub, IconPlus, IconHome2, IconPrompt } from "@tabler/icons-react";
 import { useChatStore } from "@/stores/ChatStore";
 import { getModelInfo, modelInfos } from "@/stores/Model";
 import { useRouter } from "next/router";
