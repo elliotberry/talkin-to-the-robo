@@ -98,16 +98,15 @@ export default function Hero() {
             >
               <List.Item>
                 <b>本地浏览器运行</b> – 无需安装其他应用
-                applications
               </List.Item>
               <List.Item>
                 <b>比官方UI更快</b> – 直接连接到 API
               </List.Item>
               <List.Item>
-                <b>常用的Prompt集成</b> – （填入API后）右上角查看更多Prompt
+                <b>常用的Prompt集成</b> – （填入API后）右上角查看更多 Prompt
               </List.Item>
               <List.Item>
-                <b>使用你自己的 API key</b> – 没有API KEY可在下方按钮自助获取
+                <b>使用你自己的 API key</b> – 没有 API KEY 可在下方按钮自助获取
               </List.Item>
             </List>
 
@@ -123,6 +122,7 @@ export default function Hero() {
               <Button
                 component="a"
                 href="https://faka.aihub.ren/buy/42"
+                target="_blank"
                 variant="default"
                 radius="xl"
                 size="md"
