@@ -39,13 +39,13 @@ export default function App(props: AppProps) {
   }, []);
 
   if (!isHydrated) {
-    return <div>Loading...</div>;
+    return <div>AI智能接入中...</div>;
   }
 
   return (
     <>
       <Head>
-        <title>YakGPT</title>
+        <title>GraceGPT</title>
         <meta name="description" content="A new ChatGPT UI" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
