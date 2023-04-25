@@ -138,9 +138,7 @@ export default function SettingsModal({ close }: { close: () => void }) {
             <Tabs.Tab value="11labs" icon={<IconBraces size={px("0.8rem")} />}>
               ElevenLabs
             </Tabs.Tab>
-            <Tabs.Tab value="qita"  />}>
-              支持站长
-            </Tabs.Tab>
+            
           </Tabs.List>
           <Tabs.Panel value="openai" pt="xs">
             <Accordion defaultValue="general">
@@ -384,11 +382,13 @@ export default function SettingsModal({ close }: { close: () => void }) {
                 value: voice.voice_id,
               }))}
             ></Select>
-          </Tabs.Panel>
-        <Tabs.Panel value="qita" pt="xs">
-            <p>您的支持与赞赏是对我最大的鼓励，同时也能帮助我降低网站维护和服务器支出成本。感谢您的慷慨支持！</p>
+		  <Title pt="md" pb="sm" order={4}>
+              支持站长
+            </Title>
+		  <p>您的支持与赞赏是对我最大的鼓励，同时也能帮助我降低网站维护和服务器支出成本。感谢您的慷慨支持！</p>
 				<img width="150" height="150" src="https://img.gejiba.com/images/6d67dd95de84415c8eecd6a95a97766d.png" />
           </Tabs.Panel>
+       
           <Group position="apart" mt="lg">
             <Button
               variant="light"
