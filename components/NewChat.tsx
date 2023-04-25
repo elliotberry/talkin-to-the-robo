@@ -245,7 +245,7 @@ export default function NewChatCarousel() {
 
   return (
     <Container py="xl">
-      <h2 style={{ textAlign: "center" }}> Choose a prompt...</h2>
+      <h2 style={{ textAlign: "center" }}> 选择一个角色/指令...</h2>
       <CardsCarousel>
         {Object.keys(characters).map((key) => {
           // @ts-ignore
@@ -284,7 +284,7 @@ export default function NewChatCarousel() {
           textAlign: "center",
         }}
       >
-        <h2> Or start by simply typing below</h2>
+        <h2> 或者从下方输入框开始一场新的对话</h2>
         <IconArrowDown style={{ marginLeft: "0.5rem" }} />
       </div>
     </Container>
