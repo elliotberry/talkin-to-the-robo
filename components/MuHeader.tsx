@@ -169,14 +169,7 @@ export default function MuHeader({ children }: any) {
             >
               <IconPrompt size={px("1.5rem")} />
             </ActionIcon>
-            <ActionIcon
-              sx={{ opacity: 0.8 }}
-              onClick={() => {
-                window.open("http://www.azad.asia/", "_blank");
-              }}
-            >
-              <IconHome2 size={px("1.5rem")} />
-            </ActionIcon>
+           
           </MediaQuery>
         </Group>
       </Container>
