@@ -97,7 +97,7 @@ export default function Hero() {
               }
             >
               <List.Item>
-                <b>本地浏览器运行</b> – 无需安装其他应用
+                <b>请挂上VPN使用</b> – 香港节点除外，否则可能无法保存 API
               </List.Item>
               <List.Item>
                 <b>比官方UI更快</b> – 直接连接到 API
