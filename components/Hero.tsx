@@ -103,10 +103,16 @@ export default function Hero() {
                 <b>比官方UI更快</b> – 直接连接到 API
               </List.Item>
               <List.Item>
-                <b>常用的Prompt集成</b> – （填入API后）右上角查看更多 Prompt
+                <b>常用的Prompt卡片式集成</b> – （填入API后）右上角查看更多 Prompt
               </List.Item>
               <List.Item>
-                <b>使用你自己的 API key</b> – 没有 API KEY 可在下方按钮自助获取
+                <b>语音转文本</b> – （填入API后）通过Azure和OpenAI Whisper进行语音转文本
+              </List.Item>
+              <List.Item>
+                <b>文本转语音</b> – （填入API后）通过Azure和Eleven Labs进行文本转语音
+              </List.Item>
+              <List.Item>
+                <b>使用你自己的 API key</b> – 没有 API KEY 可在下方购物车自助获取
               </List.Item>
             </List>
 
