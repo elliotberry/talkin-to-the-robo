@@ -165,7 +165,12 @@ export default function KeyModal({ close }: { close: () => void }) {
               name="填入你的 OpenAI API Key"
               initialKey={apiKeyOpenAI}
               setKeyFun={setApiKeyOpenAI}
-              descriptionAboveInput="您需要一个OpenAI API密钥。您的API密钥存储在本地的浏览器上，永远不会被发送到其他地方。如果您没有API KEY，可在首页按钮自助获取。"
+              descriptionAboveInput="您需要一个OpenAI API密钥。您的API密钥存储在本地的浏览器上，永远不会被发送到其他地方。如果您没有API KEY，可在<a
+                    target="_blank"
+                    href="https://faka.aihub.ren"
+                  >
+                    这里
+                  </a>自助获取。"
               descriptionBelowInput={
                 <p>
                   → 如果您有账号请登官网获取API：{" "}
